@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-site: #90CAF9;
+    --color-site: #FFF;
+    --color-black: #000;
+    --color-hover: #EEE;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: rgb(245, 212, 2);
+}
+
+.hidden{
+    display: none;
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section figure{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+section figure img{
+    width: 85%;
+}
+
+section .container-calcula-imc{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+    background-color: var(--bg-site);
+}
+
+section .container-calcula-imc h1{
+    text-align: center;
+    padding: 0 20px;
+}
+
+.container-input-imc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.cont-input{
+    text-align: center;
+    margin-top: 12px;
+}
+
+.cont-input h3{
+    margin-bottom: 7px;
+}
+
+.container-input-imc input, 
+.container-input-imc button{
+    padding: 7px 0;
+    border: 0;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.container-input-imc input{
+    padding-left: 5px;
+}
+
+.container-input-imc input:focus{
+    outline: none;
+}
+
+.container-input-imc button{
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 17px;
+    background-color: var(--color-site);
+}
+
+.container-input-imc button:hover{
+    background-color: var(--color-hover);
+}
+
+#box-resultado-imc{
+    background-color: var(--color-site);
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#valueDescricao{
+    color: var(--color-site);
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.container-input-imc input, .container-input-imc .button-calc-imc,
+#box-resultado-imc , #valueDescricao{
+    max-width: 250px;
+    width: 100%;
+}
+
+#btnLimpar{
+    max-width: 100px;
+    width: 100%;
+}
+
+@media(max-width: 960px){
+
+    section{
+        flex-direction: column-reverse;
+    }
+
+    section figure{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section .container-calcula-imc{
+        width: 100%;
+        min-height: 60vh;
+        padding: 40px 0px;
+    }
+
+    section .container-calcula-imc h1{
+        padding: 20px;
+    }
+
+}
+
+@media(max-width: 480px){
+
+    #box-resultado-imc , #informacao{
+        max-width: 150px;
+    }
+
+}
